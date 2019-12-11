@@ -1,0 +1,103 @@
+<<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <style>
+  body {
+    text-align: center;
+    margin: 0;
+    
+  }
+
+  #flashCards{
+    margin-left: 8%;
+  }
+
+  div.card{
+    position: relative;
+    display: inline-block;
+    background-color: white;
+    border: solid 6px rgb(0, 0, 0);
+    width: 30%;
+    height: 20rem;
+    font-size: 1.2rem;
+    margin: .3em;
+    border-radius: 2em;
+    text-align: center;
+    float: left;
+    
+
+  }
+
+  div.cardHeader{
+    background-color: rgb(221, 51, 51);
+    padding: 1em 0 1em 0;
+    border-top-left-radius: 1.5em ;
+    border-top-right-radius: 1.5em;
+  } 
+
+  .question{
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .answer{
+    display: none;
+  }
+
+  .flipfunc{
+    
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    border-radius: 2em;
+    
+
+  }
+  
+  #question{
+    width: 15rem;
+    height: 2rem;
+  }
+
+  #answer{
+    /* position: relative; */
+    width: 15rem;
+    height: 2rem;
+  }
+  </style>
+
+</head> 
+
+<body>
+    
+
+<input id="question" placeholder="front of card..." name="ques" type="text">
+<input id="answer" placeholder="back of card..." name="ans" type="text">
+<input id="submit" name="submit" type="submit" onclick="genesis()" value="Create!">
+<input id="save" type="button" name="save" value="save deck" onclick="savedeck()">
+<a onclick="this.href='data:text/html;charset=UTF-8,'+encodeURIComponent(document.documentElement.outerHTML)" href="#" download="page.html">Save Document</a> 
+
+
+<div id="flashCards">
+
+  
+
+</div>
+
+
+<script src="flashcardappv2.js"></script>
+
+</body>
+
+</html>
